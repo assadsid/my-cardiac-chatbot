@@ -98,9 +98,22 @@ def display_chat_history():
 
 # Function to handle the appointment form
 def handle_appointment_form():
+    # Custom CSS for yellow headings
+    st.markdown("""
+        <style>
+        .form-heading {
+            color: white !important;
+            font-size: 24px !important;
+            font-weight: bold !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
     if st.session_state.show_form:
         with st.form(key="appointment_form"):
-            st.write("### Appointment Form")
+            st.markdown('<p class="form-heading">Appointment Form</p>', unsafe_allow_html=True)
+            
+
             name = st.text_input("Name")
             contact = st.text_input("Contact Number")
             email = st.text_input("Email Address")
