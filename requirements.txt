@@ -1,0 +1,6 @@
+google.generativeai
+streamlit_chat
+streamlit
+python-dotenv
+Pillow
+google-cloud
